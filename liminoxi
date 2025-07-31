@@ -1,0 +1,36 @@
+<script>
+  // 1. Get ID from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const empId = urlParams.get("id");
+
+  // 2. Your employee data
+  const employees = {
+    "E001": {
+      name: "Shyam Gupta",
+      role: "CEO & CO-FOUNDER",
+      contact: "9876543210",
+      blood: "AB+",
+      email: "guptashyam1121@gmail.com",
+      image: "https://guptashyam69.github.io/employee-id/SHAY.png",
+      image1: "https://guptashyam69.github.io/employee-id/logo.png"
+    }
+  };
+
+  // 3. Display data
+  const data = employees[empId];
+  const display = document.getElementById("employeeData");
+
+  if (data) {
+    display.innerHTML = `
+      <img id="logo" src="${data.image1}" alt="Logo" style="width: 80px; margin-bottom: 10px;">
+      <img id="employeePhoto" src="${data.image}" alt="Photo of ${data.name}">
+      <h3>${data.name}</h3>
+      <p><strong>Role:</strong> ${data.role}</p>
+      <p><strong>Mobile No:</strong> ${data.contact}</p>
+      <p><strong>Email:</strong> ${data.email}</p>
+      <p><strong>Blood Group:</strong> ${data.blood}</p>
+    `;
+  } else {
+    display.innerHTML = `<p style="color:red;">Employee not found or ID missing</p>`;
+  }
+</script>
