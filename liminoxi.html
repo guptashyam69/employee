@@ -44,9 +44,9 @@
   </div>
 
   <script>
-    // 1. Get ID from URL
+    // 1. Get ID from URL (or default to E001)
     const urlParams = new URLSearchParams(window.location.search);
-    const empId = urlParams.get("id");
+    const empId = urlParams.get("id") || "E001";
 
     // 2. Your employee data
     const employees = {
@@ -57,6 +57,24 @@
         blood: "AB+",
         email: "guptashyam1121@gmail.com",
         image: "https://guptashyam69.github.io/employee-id/SHAY.png",
+        image1: "https://guptashyam69.github.io/employee-id/logo.png"
+      },
+      "E002": {
+        name: "Riya Sharma",
+        role: "Marketing Manager",
+        contact: "9876543210",
+        blood: "O+",
+        email: "riya.sharma@example.com",
+        image: "https://guptashyam69.github.io/employee-id/RIYA.png",
+        image1: "https://guptashyam69.github.io/employee-id/logo.png"
+      },
+      "E003": {
+        name: "Amit Verma",
+        role: "Product Designer",
+        contact: "8765432109",
+        blood: "B+",
+        email: "amit.verma@example.com",
+        image: "https://guptashyam69.github.io/employee-id/AMIT.png",
         image1: "https://guptashyam69.github.io/employee-id/logo.png"
       }
     };
