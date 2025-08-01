@@ -93,7 +93,7 @@
         <p><strong>Mobile No:</strong> ${data.contact}</p>
         <p><strong>Email:</strong> ${data.email}</p>
         <p><strong>Blood Group:</strong> ${data.blood}</p>
-        <p><strong>Resume:</strong><link> ${data.resume}</link></p>
+        <p><strong>Resume:</strong> <a href="${data.resume}" target="_blank">Tap to View</a></p>
       `;
     } else {
       display.innerHTML = `<p style="color:red;">Employee not found or ID missing</p>`;
